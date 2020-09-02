@@ -29,4 +29,6 @@ var data = [{
     y: Y
 }]
 
+var config = {responsive: true}
+
 Plotly.newPlot('plot', data)
