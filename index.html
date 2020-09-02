@@ -1,43 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-  </head>
-  <body>
-    <h1>Hello plot!</h1>
-    <div id="plot" style="width:1800px;height:600px"></div>
-    <script>
-      function gaussianRand() {
-        var rand = 0;
-        for (var i = 0; i < 6; i += 1) {
-          rand += Math.random();
-        }
-        return (rand / 6) - 0.5;
-      }
-      var X = [],
-      Y = [],
-      n = 1000,
-      i;
 
-      for (i = 0; i < n; i += 1) {
-        X.push(gaussianRand());
-        Y.push(gaussianRand());
-      }
+<head>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
 
-      var data = [{
-      type: "scattergl",
-      mode: "markers",
-      marker: {
-        color: '#785964',
-        line: {
-            width: 1,
-            color: '#82A7A6'}
-      },
-      x: X,
-      y: Y
-      }]
+<body>
+  <h1>Hello plot!</h1>
+  <div id="plot" style="width:1800px;height:600px"></div>
+  <script src="plot.js">
+  </script>
+</body>
 
-      Plotly.newPlot('plot', data)
-    </script>
-  </body>
 </html>
